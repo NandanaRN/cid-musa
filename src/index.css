@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-cinema {
+    font-family: 'Cinzel Decorative', serif;
+  }
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Cinema Noir Mesh Animations */
+@keyframes ambientGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-cinema-mesh {
+  background: radial-gradient(circle at 20% 20%, rgba(180, 83, 9, 0.25), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(153, 27, 27, 0.25), transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 1));
+  background-size: 200% 200%;
+  animation: ambientGlow 12s ease infinite;
+}
+
+.gold-filigree-border {
+  border: 2px solid transparent;
+  background: linear-gradient(#0f172a, #0f172a) padding-box,
+              linear-gradient(135deg, #f59e0b, #ef4444, #fbbf24) border-box;
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.7);
+  }
+}
+
+.pulse-gold {
+  animation: pulseGold 2.5s infinite;
+}
+
+/* Spooky Blood Vignette Animations */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 0.98; transform: scale(1.008); }
+}
+
+@keyframes pulseMedium {
+  0%, 100% { opacity: 0.82; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.015); }
+}
+
+@keyframes pulseFast {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.025); }
+}
+
+@keyframes bloodFlash {
+  0% { opacity: 0; transform: scale(0.95); }
+  30% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+@keyframes subtleDrift {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-medium {
+  animation: pulseMedium 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-fast {
+  animation: pulseFast 1.2s ease-in-out infinite;
+}
+
+.animate-blood-flash {
+  animation: bloodFlash 1.2s ease-out forwards;
+}
+
+.animate-subtle-drift {
+  animation: subtleDrift 8s ease-in-out infinite;
+}
