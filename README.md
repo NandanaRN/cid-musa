@@ -4,6 +4,8 @@
 
 # CID Musa: Glitch in the Alibi
 
+> **🟢 Play live: [https://cid-musa.onrender.com/](https://cid-musa.onrender.com/)**
+
 An AI-powered interactive murder-mystery detective game. You play as **Detective CID
 Musa**, investigating Indian crime cases: search the crime scene for evidence, then
 interrogate two suspects who share a rehearsed alibi — using AI-generated dialogue and
